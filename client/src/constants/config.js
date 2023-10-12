@@ -23,7 +23,7 @@ export const API_NOTIFICATION_MESSAGE = {
     }
 }
 
-
+///
 //API SERVICE CALL
 export const SERVICE_URLS = {
     userSignup : {url: '/signup', method: "POST"}
