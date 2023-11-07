@@ -70,7 +70,7 @@ const loginInitialValues = {
   password: "",
 };
 
-const Login = () => {
+const Login = ({isUserAuthenticated}) => {
   const imageURL =
     "https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";
 
@@ -122,6 +122,8 @@ const Login = () => {
         username: response.data.username,
         name: response.data.name,
       });
+
+      isUserAuthenticated(true);
 
       navigate('/');
     } else {
