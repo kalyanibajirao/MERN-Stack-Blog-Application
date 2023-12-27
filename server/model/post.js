@@ -6,13 +6,13 @@ const postScheama = mongoose.Schema({
     requred: true,
     unique: true,
   },
-  discription: {
+  description: {
     type: String,
     requred: true,
   },
   picture: {
     type: String,
-    requred: true,
+    requred: false,
   },
   username: {
     type: String,
