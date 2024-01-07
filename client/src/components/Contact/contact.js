@@ -1,5 +1,5 @@
 import { Box, styled, Typography, Link } from "@mui/material";
-import {  Instagram, Email } from "@mui/icons-material";
+import {  Email } from "@mui/icons-material";
 
 const Banner = styled(Box)`
   background-image: url(http://mrtaba.ir/image/bg2.jpg);
@@ -28,17 +28,9 @@ const Contact = () => {
       <Wrapper>
         <Typography variant="h3">Getting in touch is easy!</Typography>
         <Text variant="h5">
-          Reach out to me on
+         send me an Email
           <Link
-            href="https://www.instagram.com/codeforinterview/"
-            color="inherit"
-            target="_blank"
-          >
-            <Instagram />
-          </Link>
-          or send me an Email
-          <Link
-            href="mailto:codeforinterview@gmail.com?Subject=This is a subject"
+            href="mailto:kalyanibajirao1999@gmail.com?Subject=This is a subject"
             target="_blank"
             color="inherit"
           >
