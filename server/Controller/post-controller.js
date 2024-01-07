@@ -1,5 +1,6 @@
 import Post from "../model/post.js";
 
+
 export const createPost = async (request, response) => {
   try {
     const post = await new Post(request.body);
@@ -31,6 +32,36 @@ export const getPost = async (request, response) => {
     const post = await Post.findById(request.params.id);
     return response.status(200).json(post);
   } catch (error) {
-    return response.status(500).json({ msg: error.message})
+    return response.status(500).json({ msg: error.message });
   }
-}
+};
+
+export const updatePost = async (request, response) => {
+  try {
+    const post = await Post.findById(request.params.id);
+    if (!post) {
+      return response.sta(404).json({ msg: "post not found" });
+    }
+    await Post.findByIdAndUpdate(request.params.id, { $set: request.body });
+
+    await response.status(200).json({ msg: "post updated successfully" });
+  } catch (error) {
+    return response.status(500).json({ error: error.message });
+  }
+};
+
+
+
+export const deletePost = async (request, response) => {
+  try {
+    const deletedPost = await Post.findByIdAndDelete(request.params.id);
+    if (!deletedPost) {
+      return response.status(404).json({ msg: "Post not found" });
+    }
+
+    response.status(200).json({ msg: "Post deleted successfully" });
+  } catch (error) {
+    return response.status(500).json({ error: error.message });
+  }
+};
+
