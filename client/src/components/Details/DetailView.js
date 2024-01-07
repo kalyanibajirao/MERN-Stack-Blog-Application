@@ -20,28 +20,28 @@ const Image = styled("img")({
 
 const Heading = styled(Typography)`
   font-size: 38px;
-  fontweight: 600;
-  text-aligh: center;
+  font-weight: 600;
+  text-align: center;
   margin: 50px 0 10px 0;
-  word-break: break-word;
 `;
 
-const description = styled(Typography)`
+const Description = styled(Typography)`
   word-break: break-word;
 `;
 
 const EditIcon = styled(Edit)`
-margin: 5px,
-padding: 5px,
-border: 1px solid #878787,
-border-radius: 10px,
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #878787;
+  border-radius: 10px;
 `;
 
 const DeleteIcon = styled(Delete)`
-margin: 5px,
-padding: 5px,
-border: 1px solid #878787,
-border-radius: 10px`;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #878787;
+  border-radius: 10px;
+`;
 
 const Author = styled(Box)`
   color: #878787;
@@ -90,12 +90,12 @@ const DetailView = () => {
           </Box>
         </Typography>
 
-        <Typography style={{ marginleft: "auto" }}>
+        <Typography style={{ marginLeft: "auto" }}>
           {new Date(post.createdDate).toDateString()}
         </Typography>
-          </Author>
-          
-      <description>{post.description}</description>
+      </Author>
+
+      <Description>{post.description}</Description>
     </Container>
   );
 };
